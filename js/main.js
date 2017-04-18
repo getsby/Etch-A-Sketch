@@ -9,7 +9,7 @@ $(document).ready(function(){
 	addCells(recentSize)
 
 	$("#clear").click(function(){
-		$('#frame').effect('shake',{times:2});
+		$('#container').effect('shake',{times:2});
 		$("#DrawPad").empty();
 		addCells(recentSize);
 	});
@@ -33,16 +33,23 @@ $(document).ready(function(){
 		
 });
 
-function addCells(size) {
-	var pixelSize = sizeofpad/ size
-	 for ( x = 0; x <size; x++){
-	 	for (y = 0; y < size; y++{
-	 		$("#frame").append("<div id = 'pixel'></div>")
-	 	}
-	 }
+$(document).ready(function() {
+    for(var x = 0; x < 16; x++) {
+        for(var y = 0; y < 16; y++) {
+        	var unit = $("<div class='unit' style='position:absolute'></div>");
+            unit.appendTo('#container', {left:});
+        }
+    }
+});
 
-var mouseDown = false;
-$(document).mouseDown(function(){
-	mouseDown = true;
-}).mouseup(function(){mouseDown = false});
 
+$(document).ready(function(){
+	$('.DrawPad').bind("mouseover",function(){
+		var colour = $(this).css("background-color");
+
+		$(this).css("background", "#380606");
+		$(this).bind("mouseout",function(){
+			$(this).css("background", color)
+		})
+	})
+})
