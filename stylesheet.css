@@ -11,7 +11,7 @@
 }
 
 
-div#DrawPad {
+#DrawPad {
   margin: 30px auto;
   text-align: center;
   width: 500px;
@@ -20,7 +20,7 @@ div#DrawPad {
   background-color: white;
 }
 
-div#frame {
+#container {
   margin: 30px auto;
   text-align: center;
   width: 600px;
@@ -30,6 +30,11 @@ div#frame {
   border-radius: 10px;
 }
 
-#pixel {
-  float: left;
+.unit {
+  background-color: #cbcbcb;
+  height: 10px;
+  width: 10px;
+  margin:1px;
+  display: inline-block; 
+  float: left
 }
