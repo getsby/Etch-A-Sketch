@@ -1,4 +1,4 @@
-//------------add div grid------------
+//--------------add div grid------------
 $(document).ready(function() {
     for(var x = 0; x < 41; x++) {
         for(var y = 0; y < 41; y++) {
@@ -8,7 +8,7 @@ $(document).ready(function() {
     }
 });
 
-//---------draw with black marker----
+//---------draw with black marker-------
 $(document).ready(function () {
  var colorOrig=$(".unit").css('background-color');
  $("#marker").click(function () {    
